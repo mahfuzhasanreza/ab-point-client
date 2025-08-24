@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import logo from '../../../assets/logo/ab-point-logo.png'
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,20 +49,23 @@ const NavBar = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-white'
-      }`}>
+      <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-white/95 backdrop-blur-md shadow-lg'
+        : 'bg-white'
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                {/* <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <Globe className="text-white" size={24} />
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div> */}
+
+                <div className="w-14 h-14 bg-gradient-to-br from-yellow-600 to-white-800 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                  <img src={logo} alt="" className='text-white'/>
+                </div>
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
@@ -85,16 +89,14 @@ const NavBar = () => {
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
                 >
                   <span>Services</span>
-                  <ChevronDown size={16} className={`transform transition-transform duration-200 ${
-                    activeDropdown === 'services' ? 'rotate-180' : ''
-                  }`} />
+                  <ChevronDown size={16} className={`transform transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''
+                    }`} />
                 </button>
-                
-                <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 ${
-                  activeDropdown === 'services' 
-                    ? 'opacity-100 visible transform translate-y-0' 
-                    : 'opacity-0 invisible transform -translate-y-2'
-                }`}>
+
+                <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 ${activeDropdown === 'services'
+                  ? 'opacity-100 visible transform translate-y-0'
+                  : 'opacity-0 invisible transform -translate-y-2'
+                  }`}>
                   <div className="p-2">
                     <a href="#asia-services" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 group">
                       <div className="flex items-center space-x-3">
@@ -158,14 +160,13 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Menu */}
-          <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          }`}>
+          <div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}>
             <div className="py-4 space-y-2 border-t border-gray-100">
               <a href="#home" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-all duration-200">
                 Home
               </a>
-              
+
               <div className="px-4 py-2">
                 <div className="text-gray-500 text-sm font-medium mb-2">Services</div>
                 <div className="pl-4 space-y-1">
@@ -177,7 +178,7 @@ const NavBar = () => {
                   </a>
                 </div>
               </div>
-              
+
               <a href="#about" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-all duration-200">
                 About Us
               </a>
@@ -190,7 +191,7 @@ const NavBar = () => {
               <a href="#contact" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-all duration-200">
                 Contact
               </a>
-              
+
               <div className="px-4 pt-2">
                 <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-xl font-semibold">
                   Get Started
