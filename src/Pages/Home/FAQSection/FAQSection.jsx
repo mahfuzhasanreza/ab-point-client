@@ -9,9 +9,9 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What is UIU CanSat?",
+      question: "What is AB Point?",
       answer:
-        "UIU CanSat is a student-led aerospace project team from United International University that designs, builds, and launches satellite prototypes called CanSats for various competitions.",
+        "AB Point is a student-led aerospace project team from United International University that designs, builds, and launches satellite prototypes called CanSats for various competitions.",
     },
     {
       question: "Who can join the team?",
@@ -19,7 +19,7 @@ export default function FAQSection() {
         "Any enthusiastic student from UIU, regardless of department or level, can apply to join during the recruitment period.",
     },
     {
-      question: "What skills are required to join UIU CanSat?",
+      question: "What skills are required to join AB Point?",
       answer:
         "Both beginners and experienced students are welcome. Skills in programming, electronics, design, research, writing, or management are all valuable.",
     },
@@ -29,7 +29,7 @@ export default function FAQSection() {
         "The frequency of meetings depends on the project timeline. During intense phases, meetings are held weekly or more often.",
     },
     {
-      question: "Is UIU CanSat only about technical work?",
+      question: "Is AB Point only about technical work?",
       answer:
         "Not at all. We also need members for documentation, sponsorship, marketing, event coordination, and more.",
     },
